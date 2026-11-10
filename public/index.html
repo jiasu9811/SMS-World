@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SMS-World — 授权短信号码目录与收件箱">
+  <title>SMS-World · 在线短信收件箱</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="/">SMS-World</a><nav><a href="#countries">国家号码</a><a href="#sources">号码来源</a><a href="/admin">管理入口</a></nav></header>
+<main>
+<section class="hero"><div><p class="eyebrow">AUTHORIZED SMS DIRECTORY</p><h1>在线短信号码目录</h1><p class="muted">浏览已获授权公开展示的号码与收件箱。号码状态以最近一次真实测试为准。</p></div><div class="stats"><div><b id="number-count">—</b><span>号码</span></div><div><b id="country-count">—</b><span>国家/地区</span></div><div><b id="online-count">—</b><span>已验证可用</span></div></div></section>
+<section id="countries" class="panel"><div class="section-head"><div><p class="eyebrow">DIRECTORY</p><h2>国家与号码</h2></div><button id="refresh" class="secondary">刷新列表</button></div>
+<div class="filters"><input id="search" type="search" placeholder="搜索国家、区号或号码"><select id="country"><option value="">所有国家/地区</option></select><select id="status"><option value="">所有状态</option><option value="verified">已验证</option><option value="pending">待验证</option><option value="offline">暂不可用</option></select></div>
+<div id="numbers" class="number-grid"><div class="empty">正在加载号码目录…</div></div><p class="footnote">目前没有接入真实号码时，页面不会伪造号码；演示/待验证资源不会标记为可用。</p></section>
+<section id="sources" class="source-note"><h2>号码来源与测试</h2><p>支持 GitHub 项目目录发现和已获授权的短信 API 适配器。GitHub 仓库中的号码文本不代表号码可接收短信；只有来源授权、真实短信测试通过后才会显示为“已验证”。</p></section>
+</main><footer>SMS-World · 请勿将公开收件箱用于个人账户、敏感验证码或机密信息。</footer>
+<dialog id="inbox"><div class="dialog-head"><div><p class="eyebrow">SMS INBOX</p><h2 id="inbox-title">短信收件箱</h2></div><button id="close" class="secondary">关闭</button></div><div id="messages" class="messages"></div><div class="dialog-actions"><span id="inbox-status" class="muted"></span><button id="reload-messages">更新短信</button></div></dialog>
+<script src="/app.js" defer></script></body></html>
